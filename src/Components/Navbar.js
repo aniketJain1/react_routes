@@ -1,7 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 // NavLink gives Active class funcationality, not Link Component
-
-
 import React from 'react'
 
 function Navbar() {
@@ -9,14 +7,25 @@ function Navbar() {
         return{
             fontWeight: isActive ? 'bold' : 'normal',
             fontSize: isActive ? '32px' : '24px',
-
         }
+    }
+    const navigate = useNavigate();
+    const btnStyle = {
+        fontSize: '16px',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        margin: '10px',
+        padding: '10px',
+        border: '1px solid black',
+        borderRadius: '5px',
+        backgroundColor: 'white'
     }
   return (
     <nav>
         <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
         <NavLink style={NavLinkCSS} to='/about'> About </NavLink>
         <NavLink style={NavLinkCSS} to='/contact'> Contact </NavLink>
+        <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )
 }
