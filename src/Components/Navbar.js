@@ -21,8 +21,9 @@ function Navbar() {
         backgroundColor: 'white'
     }
   return (
-    <nav>
+    <nav className='main-nav' >
         <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
+        <NavLink style={NavLinkCSS} to='/Products'> Products </NavLink>
         <NavLink style={NavLinkCSS} to='/about'> About </NavLink>
         <NavLink style={NavLinkCSS} to='/contact'> Contact </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
