@@ -11,6 +11,7 @@ import Jeans from "./Jeans";
 import Users from "./Users";
 import UserDetails from "./UserDetails";
 import Admin from "./Admin";
+import Search from './Search';
 
 
 function RoutesComponent() {
@@ -41,19 +42,25 @@ function RoutesComponent() {
     <>
         <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/products" element={<Products />}>
           <Route index element={<Shirts />}></Route>
           <Route path="shirts" element={<Shirts />} />
           <Route path="jeans" element={<Jeans />} />
         </Route>
+
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/search" element={<Search />} />
+
         <Route path="/users" element={<Users />}>
           <Route path=":id" element={<UserDetails />} />
           <Route path="admin" element={<Admin />} />
         </Route>
+
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      
       {/* <AboutNavBtn/> */}
 
       {/* <button onClick={() => navigate('/about')}>About</button> */}
