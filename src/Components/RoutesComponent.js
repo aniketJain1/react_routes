@@ -12,6 +12,7 @@ import Users from "./Users";
 import UserDetails from "./UserDetails";
 import Admin from "./Admin";
 import Search from './Search';
+import LazyComponent from './LazyC/LazyComponent';
 
 
 function RoutesComponent() {
@@ -59,8 +60,9 @@ function RoutesComponent() {
         </Route>
 
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/lazy" element={<LazyComponent />} />
       </Routes>
-      
+
       {/* <AboutNavBtn/> */}
 
       {/* <button onClick={() => navigate('/about')}>About</button> */}

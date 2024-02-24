@@ -20,7 +20,7 @@ function Search() {
             <input type='text' placeholder='Search' onChange={(e) => setSearchParams({q:e.target.value})}/>
             <br/><br/>
             <input type='submit' value='Search' />
-            <input type='reset' value='reset' />
+            <input type='reset' value='Reset' />
             <br/><br/>           
 
         </form>
