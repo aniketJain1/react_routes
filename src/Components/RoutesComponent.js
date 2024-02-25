@@ -13,6 +13,7 @@ import UserDetails from "./UserDetails";
 import Admin from "./Admin";
 import Search from './Search';
 import LazyComponent from './LazyC/LazyComponent';
+import Validation1 from './Validation/Validation1';
 
 
 function RoutesComponent() {
@@ -60,7 +61,8 @@ function RoutesComponent() {
         </Route>
 
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/lazy" element={<LazyComponent />} />
+        {/* <Route path="/lazy" element={<LazyComponent />} /> */}
+        <Route path="/validation1" element={<Validation1 />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}

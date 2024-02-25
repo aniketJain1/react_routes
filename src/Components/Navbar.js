@@ -28,7 +28,8 @@ function Navbar() {
         <NavLink style={NavLinkCSS} to='/contact'> Contact </NavLink>
         <NavLink style={NavLinkCSS} to='/search'> Search </NavLink>
         <NavLink style={NavLinkCSS} to='/users'> Users </NavLink>
-        <NavLink style={NavLinkCSS} to='/lazy'> LazyEx </NavLink>
+        {/* <NavLink style={NavLinkCSS} to='/lazy'> LazyEx </NavLink> */}
+        <NavLink style={NavLinkCSS} to='/validation1'> Validation </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )
