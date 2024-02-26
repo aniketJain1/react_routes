@@ -1,33 +1,55 @@
+import { Formik, useFormik } from "formik";
 
-import { useFormik } from 'formik'
+function FormikForm() {
+  const formInitialValues = {
+    name: "Aniket",
+    email: "xyz",
+  };
 
-function FormikForm() { 
+  // const formik = useFormik({
+  //     initialValues: formInitialValues,
+  //     onSubmit: (values) => {
+  //       console.log(values);
+  //       console.log(values.name);
+  //       console.log(values.email);
+  //     }
 
-    const formInitialValues = {
-        name : 'Aniket',
-        email : 'xyz'
+  const {handleSubmit, handleChange, values} = useFormik({
+    initialValues: formInitialValues,
+    onSubmit: (values) => {
+      console.log(values);
+      console.log(values.name);
+      console.log(values.email);
     }
-    
-    const formik = useFormik({
-        initialValues: formInitialValues
-    });
-    
+
+  });
+
   return (
     <div>
-    <h1>Formik Demo</h1>
-        <form>
+      <h1>Formik Demo</h1>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="">Enter Name : </label>
-        <input type="text" name="name" value={formik.values.name} />
-        <br /><br />
+        <input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          value={values.name}
+        />
+        <br />
+        <br />
         <label htmlFor="">Enter Email : </label>
-        <input type="text" name="email" value={formik.values.email} />
-        <br /><br />
-        <input type="submit" value='Submit'/>
-        </form>
-
-
+        <input
+          type="text"
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+        />
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
-  )
+  );
 }
 
-export default FormikForm
+export default FormikForm;
