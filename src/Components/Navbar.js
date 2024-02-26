@@ -30,6 +30,7 @@ function Navbar() {
         <NavLink style={NavLinkCSS} to='/users'> Users </NavLink>
         {/* <NavLink style={NavLinkCSS} to='/lazy'> LazyEx </NavLink> */}
         <NavLink style={NavLinkCSS} to='/validation1'> Validation </NavLink>
+        <NavLink style={NavLinkCSS} to='/formikyup'> FormikYup </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )

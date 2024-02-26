@@ -14,11 +14,12 @@ import Admin from "./Admin";
 import Search from './Search';
 import LazyComponent from './LazyC/LazyComponent';
 import Validation1 from './Validation/Validation1';
+import FormikForm from './FormikYup/FormikForm';
 
 
 function RoutesComponent() {
     
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // const AboutNavBtn = () =>{
   // const navigate = useNavigate();
   // return(
@@ -63,6 +64,7 @@ function RoutesComponent() {
         <Route path="*" element={<PageNotFound />} />
         {/* <Route path="/lazy" element={<LazyComponent />} /> */}
         <Route path="/validation1" element={<Validation1 />} />
+        <Route path="/formikyup" element={<FormikForm />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}
