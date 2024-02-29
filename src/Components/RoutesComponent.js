@@ -1,20 +1,21 @@
 import React from 'react'
 
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+import Home from "./NavLinks/Home";
+import About from "./NavLinks/About";
+import Contact from "./NavLinks/Contact";
 import PageNotFound from "./PageNotFound";
-import Products from "./Products";
-import Shirts from "./Shirts";
-import Jeans from "./Jeans";
-import Users from "./Users";
-import UserDetails from "./UserDetails";
-import Admin from "./Admin";
-import Search from './Search';
+import Products from "./NavLinks/Products";
+import Shirts from "./NavLinks/Shirts";
+import Jeans from "./NavLinks/Jeans";
+import Users from "./NavLinks/Users";
+import UserDetails from "./NavLinks/UserDetails";
+import Admin from "./NavLinks/Admin";
+import Search from './NavLinks/Search';
 import LazyComponent from './LazyC/LazyComponent';
 import Validation1 from './Validation/Validation1';
 import FormikForm from './FormikYup/FormikForm';
+import FormikForm2 from './FormikYup/FormikForm2';
 
 
 function RoutesComponent() {
@@ -65,6 +66,7 @@ function RoutesComponent() {
         {/* <Route path="/lazy" element={<LazyComponent />} /> */}
         <Route path="/validation1" element={<Validation1 />} />
         <Route path="/formikyup" element={<FormikForm />} />
+        <Route path="/formikyup2" element={<FormikForm2 />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}
