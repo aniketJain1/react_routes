@@ -16,6 +16,7 @@ import LazyComponent from './LazyC/LazyComponent';
 import Validation1 from './Validation/Validation1';
 import FormikForm from './FormikYup/FormikForm';
 import FormikForm2 from './FormikYup/FormikForm2';
+import ReactBS from './ReactBS/ReactBS';
 
 
 function RoutesComponent() {
@@ -67,6 +68,7 @@ function RoutesComponent() {
         <Route path="/validation1" element={<Validation1 />} />
         <Route path="/formikyup" element={<FormikForm />} />
         <Route path="/formikyup2" element={<FormikForm2 />} />
+        <Route path="/react-bs" element={<ReactBS />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}

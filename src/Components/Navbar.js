@@ -32,6 +32,7 @@ function Navbar() {
         <NavLink style={NavLinkCSS} to='/validation1'> Validation </NavLink>
         <NavLink style={NavLinkCSS} to='/formikyup'> FormikYup </NavLink>
         <NavLink style={NavLinkCSS} to='/formikyup2'> FormikYup2 </NavLink>
+        <NavLink style={NavLinkCSS} to='/React-bs'> React BS </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )
