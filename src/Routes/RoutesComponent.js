@@ -1,23 +1,21 @@
 import React from 'react'
 
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Home from "./NavLinks/Home";
-import About from "./NavLinks/About";
-import Contact from "./NavLinks/Contact";
-import PageNotFound from "./PageNotFound";
-import Products from "./NavLinks/Products";
-import Shirts from "./NavLinks/Shirts";
-import Jeans from "./NavLinks/Jeans";
-import Users from "./NavLinks/Users";
-import UserDetails from "./NavLinks/UserDetails";
-import Admin from "./NavLinks/Admin";
-import Search from './NavLinks/Search';
-import LazyComponent from './LazyC/LazyComponent';
-import Validation1 from './Validation/Validation1';
-import FormikForm from './FormikYup/FormikForm';
-import FormikForm2 from './FormikYup/FormikForm2';
-import ReactBS from './ReactBS/ReactBS';
-
+import Home from '../Home/Home';
+import Products from '../Product/Products';
+import Shirts from '../Product/Shirts';
+import Jeans from '../Product/Jeans';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Search from '../Search/Search';
+import Users from '../Users/Users';
+import UserDetails from '../Users/UserDetails';
+import Admin from '../Admin/Admin';
+import PageNotFound from '../PageNotFound';
+import Validation1 from '../Validation/Validation1';
+import FormikForm from '../FormikYupForm/FormikForm';
+import FormikForm2 from '../FormikYupForm/FormikForm2';
+import DetailsForm from '../ChakraForm/DetailsForm';
 
 function RoutesComponent() {
     
@@ -46,12 +44,12 @@ function RoutesComponent() {
   return (
     <>
         <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={ <Home/>} />
 
         <Route path="/products" element={<Products />}>
-          <Route index element={<Shirts />}></Route>
+          <Route index element={<Shirts/>}></Route>
           <Route path="shirts" element={<Shirts />} />
-          <Route path="jeans" element={<Jeans />} />
+          <Route path="jeans" element={<Jeans/>} />
         </Route>
 
         <Route path="/about" element={<About />} />
@@ -63,12 +61,12 @@ function RoutesComponent() {
           <Route path="admin" element={<Admin />} />
         </Route>
 
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound/>} />
         {/* <Route path="/lazy" element={<LazyComponent />} /> */}
-        <Route path="/validation1" element={<Validation1 />} />
+        <Route path="/validation1" element={<Validation1/>} />
         <Route path="/formikyup" element={<FormikForm />} />
         <Route path="/formikyup2" element={<FormikForm2 />} />
-        <Route path="/react-bs" element={<ReactBS />} />
+        <Route path="/detailsform" element={<DetailsForm />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}

@@ -3,9 +3,10 @@ import React from 'react'
 
 function Jeans() {
   return (
-    <div>
+    <>
+      <br></br>
         <h1>All Jeans Available...</h1>
-    </div>
+    </>
   )
 }
 

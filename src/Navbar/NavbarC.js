@@ -2,18 +2,18 @@ import { NavLink, useNavigate } from 'react-router-dom'
 // NavLink gives Active class funcationality, not Link Component
 import React from 'react'
 
-function Navbar() {
+function NavbarC() {
     const NavLinkCSS = ({isActive}) => {
         return{
             fontWeight: isActive ? 'bold' : 'normal',
-            fontSize: isActive ? '32px' : '24px',
+            fontSize: isActive ? '30px' : '22px',
         }
     }
     const navigate = useNavigate();
     const btnStyle = {
         fontSize: '16px',
         fontWeight: 'bold',
-        cursor: 'pointer',
+    cursor: 'pointer',
         margin: '10px',
         padding: '10px',
         border: '1px solid black',
@@ -32,10 +32,10 @@ function Navbar() {
         <NavLink style={NavLinkCSS} to='/validation1'> Validation </NavLink>
         <NavLink style={NavLinkCSS} to='/formikyup'> FormikYup </NavLink>
         <NavLink style={NavLinkCSS} to='/formikyup2'> FormikYup2 </NavLink>
-        <NavLink style={NavLinkCSS} to='/React-bs'> React BS </NavLink>
+        <NavLink style={NavLinkCSS} to='/detailsform'> Details Form </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )
 }
 
-export default Navbar
+export default NavbarC

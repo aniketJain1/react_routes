@@ -42,6 +42,7 @@ function FormikForm() {
       <h1>Formik Demo</h1>
       <form onSubmit={handleSubmit}>
 
+      {/* Name */}
         <label htmlFor="">Enter Name : </label>
         <input
           type="text"
@@ -55,6 +56,8 @@ function FormikForm() {
         {errors.name && touched.name ? (<span style={{color:'red'}}>{errors.name}</span>) : null}
         <br />
         <br />
+
+        {/* Email */}
         <label htmlFor="">Enter Email : </label>
         <input
           type="text"
@@ -69,6 +72,7 @@ function FormikForm() {
         <br />
         <br />
 
+        {/* Age */}
         <label htmlFor="">Enter Age : </label>
         <input
           type="text"
@@ -83,6 +87,7 @@ function FormikForm() {
         <br />
         <br />
 
+        {/* Password */}
         <label htmlFor="">Enter Password : </label>
         <input
           type="text"
@@ -98,6 +103,7 @@ function FormikForm() {
         <br />
         <br />
         
+        {/* Confirm Password */}
         <label htmlFor="">Enter Confirm Password : </label>
         <input
           type="text"
@@ -113,6 +119,7 @@ function FormikForm() {
         <br />
         <br />
 
+        {/* Submit Button */}
         <input type="submit" value="Submit" />
       </form>
     </div>

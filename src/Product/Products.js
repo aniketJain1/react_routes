@@ -7,15 +7,15 @@ function Products() {
       <div>
         <h1>Products</h1>
       </div>
-      
-      <nav>
-        <h2>
-          <Link to="shirts">Shirts</Link>
-        </h2>
-        <h2>
-          <Link to="jeans">Jeans</Link>
-        </h2>
-      </nav>
+      <flex>
+        <nav>
+          
+            <Link to="shirts">Shirts</Link> &nbsp;
+            <Link to="jeans">Jeans</Link>
+        </nav>
+      </flex>
+
+      <br></br>
 
       <Outlet />
     </>

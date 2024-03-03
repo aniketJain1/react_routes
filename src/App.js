@@ -1,11 +1,13 @@
+import { Navbar } from "react-bootstrap";
 import "./App.css";
-import Navbar from "./Components/Navbar";
-import RoutesComponent from './Components/RoutesComponent'
+
+import NavbarC from './Navbar/NavbarC'
+import RoutesComponent from "./Routes/RoutesComponent";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <NavbarC/>
       <RoutesComponent />
     </>
   );
