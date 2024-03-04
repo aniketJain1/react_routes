@@ -60,3 +60,10 @@ nav a.active{
   align-items: center;
   justify-content: center;
 }
+
+.normaldiv{
+  border: 1px solid grey;
+  margin: 10px;
+  width: 100%;
+  border-radius: 10px;
+}

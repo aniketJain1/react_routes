@@ -16,6 +16,8 @@ import Validation1 from '../Validation/Validation1';
 import FormikForm from '../FormikYupForm/FormikForm';
 import FormikForm2 from '../FormikYupForm/FormikForm2';
 import DetailsForm from '../ChakraForm/DetailsForm';
+import ImageDemo from '../Images/ImageDemo';
+import CardsBs from '../Cards/CardsBs';
 
 function RoutesComponent() {
     
@@ -67,6 +69,8 @@ function RoutesComponent() {
         <Route path="/formikyup" element={<FormikForm />} />
         <Route path="/formikyup2" element={<FormikForm2 />} />
         <Route path="/detailsform" element={<DetailsForm />} />
+        <Route path="/image" element={<ImageDemo />} />
+        <Route path="/cards" element={<CardsBs />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}
