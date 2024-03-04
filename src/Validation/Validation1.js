@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -52,7 +53,7 @@ function Validation1() {
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="formstyle">
       <h1>Form validation Demo</h1>
 
       <form onSubmit={handleSubmit}>

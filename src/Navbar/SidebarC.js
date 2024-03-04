@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 // NavLink gives Active class funcationality, not Link Component
 import React from 'react'
 
-function Sidebar() {
+function SidebarC() {
     const NavLinkCSS = ({isActive}) => {
         return{
             fontWeight: isActive ? 'bold' : 'normal',
@@ -13,7 +13,7 @@ function Sidebar() {
     const btnStyle = {
         fontSize: '16px',
         fontWeight: 'bold',
-    cursor: 'pointer',
+        cursor: 'pointer',
         margin: '10px',
         padding: '10px',
         border: '1px solid black',
@@ -21,7 +21,7 @@ function Sidebar() {
         backgroundColor: 'white'
     }
   return (
-    <nav className='main-nav' >
+    <nav className='main-sidebar' >
         <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
         <NavLink style={NavLinkCSS} to='/Products'> Products </NavLink>
         <NavLink style={NavLinkCSS} to='/about'> About </NavLink>
@@ -40,4 +40,4 @@ function Sidebar() {
   )
 }
 
-export default Sidebar
+export default SidebarC
