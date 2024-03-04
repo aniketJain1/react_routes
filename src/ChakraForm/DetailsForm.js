@@ -55,7 +55,7 @@ function DetailsForm() {
               status: "success",
               duration: 5000,
               isClosable: true,
-              position: 'top-center',
+              position: 'bottom-right',
             });
           })
           .catch((error) => {
@@ -66,7 +66,7 @@ function DetailsForm() {
               status: "error",
               duration: 5000,
               isClosable: true,
-              position: 'top-center',
+              position: 'bottom-right',
             });
           });
       },
@@ -79,12 +79,12 @@ function DetailsForm() {
   };
 
   return (
-    <div className="formstyle w-100 ">
-      <Form className="w-75" onSubmit={handleSubmit}>
+    <div className="formstyle w-100">
+      <Form className="w-50 m-4" onSubmit={handleSubmit}>
         <label>
           <h2>Details Form</h2>
         </label>
-        <Form.Group className="mb-3" controlId="formBasic">
+        <Form.Group className="mb-2" controlId="formBasic">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"

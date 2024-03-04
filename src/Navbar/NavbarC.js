@@ -5,10 +5,10 @@ import { Col, Container, Nav, NavDropdown, Navbar, Row } from "react-bootstrap";
 function NavbarC() {
   return (
     <>
-      <Container fluid>
+      <Container fluid className="sticky-top p-0">
         <Row>
           <Col>
-            <Navbar fixed='top' bg="dark" variant="dark" expand="md" >
+            <Navbar bg="dark" variant="dark" expand="md" className="text-center">
               <Container>
                 <Navbar.Brand href="#" className="d-flex">
                   <img

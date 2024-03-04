@@ -21,7 +21,7 @@ function SidebarC() {
         backgroundColor: 'white'
     }
   return (
-    <nav className='main-sidebar' >
+    <nav className='main-sidebar bg-dark' >
         <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
         <NavLink style={NavLinkCSS} to='/Products'> Products </NavLink>
         <NavLink style={NavLinkCSS} to='/about'> About </NavLink>
