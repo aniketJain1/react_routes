@@ -35,9 +35,9 @@ function Shirts() {
         <Row>
           {apiData
             .map((items) => {
-              const { id, title, url } = items;
+              const { id, title, url, thumbnailUrl } = items;
               return (
-                <ShirtsCard key={id}  title={title.slice(0, 10)}  url={url} />
+                <ShirtsCard key={id}  title={title.slice(0, 10)}  url={url} thumbnailUrl={thumbnailUrl} />
               );
             })
             .slice(100,130 )}
@@ -48,10 +48,10 @@ function Shirts() {
   )
 }
 
-function ShirtsCard({key, title, url }) {
+function ShirtsCard({key, title, url, thumbnailUrl }) {
   return (
     <Col md={3} className="mt-3">
-      <Card >
+      <Card className="shadow mb-5 bg-white rounded">
         <Card.Img src={url} />
         <Card.Body>
           <Card.Title> {title}</Card.Title>

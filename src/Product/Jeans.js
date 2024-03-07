@@ -68,7 +68,7 @@ function Jeans() {
 function JeansCard({ title, body }) {
   return (
     <Col md={4} lg={3} className="mt-3">
-      <Card bg="" border="primary">
+      <Card bg="" border="primary" className=" shadow mb-5 bg-white rounded">
         <Card.Img src={process.env.PUBLIC_URL + "/images/jeans.jpg"} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
