@@ -35,6 +35,7 @@ function SidebarC() {
         <NavLink style={NavLinkCSS} to='/detailsform'> Details Form </NavLink>
         <NavLink style={NavLinkCSS} to='/image'> Image </NavLink>
         <NavLink style={NavLinkCSS} to='/cards'> Cards </NavLink>
+        <NavLink style={NavLinkCSS} to='/reducer'> Reducer Game </NavLink>
         <button onClick={() => navigate(-1)} style={btnStyle}>Go Back</button>
     </nav>
   )

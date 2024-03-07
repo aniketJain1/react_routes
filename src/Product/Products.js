@@ -1,23 +1,37 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import { Container, VStack } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import Shirts from "./Shirts";
+import Jeans from "./Jeans";
 
 function Products() {
   return (
     <>
-      <div>
-        <h1>Products</h1>
-      </div>
-      <flex>
-        <nav>
-          
-            <Link to="shirts">Shirts</Link> &nbsp;
-            <Link to="jeans">Jeans</Link>
-        </nav>
-      </flex>
+      <VStack className="w-100">
+        <Container maxW="100%" color="#262626" className="p-4 bg-light">
+          <div>
+            <h2>Products</h2>
+          </div>
 
-      <br></br>
+          <Tabs>
+            <TabList>
+              <Tab>
+                <Link to="shirts">Shirts</Link>
+              </Tab>
+              <Tab>
+                <Link to="jeans">Jeans</Link>
+              </Tab>
+            </TabList>
+          </Tabs>
 
-      <Outlet />
+          <Routes>
+            <Route index element={<Shirts />} />
+            <Route path="shirts" element={<Shirts />} />
+            <Route path="jeans" element={<Jeans />} />
+          </Routes>
+        </Container>
+      </VStack>
     </>
   );
 }

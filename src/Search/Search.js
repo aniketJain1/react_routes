@@ -21,6 +21,7 @@ function Search() {
             <br/><br/>
             <input type='submit' value='Search' />
             <input type='reset' value='Reset' />
+            
             <br/><br/>           
 
         </form>

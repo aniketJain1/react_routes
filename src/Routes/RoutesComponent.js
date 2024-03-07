@@ -3,8 +3,8 @@ import React from 'react'
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from '../Home/Home';
 import Products from '../Product/Products';
-import Shirts from '../Product/Shirts';
-import Jeans from '../Product/Jeans';
+// import Shirts from '../Product/Shirts';
+// import Jeans from '../Product/Jeans';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Search from '../Search/Search';
@@ -18,6 +18,7 @@ import FormikForm2 from '../FormikYupForm/FormikForm2';
 import DetailsForm from '../ChakraForm/DetailsForm';
 import ImageDemo from '../Images/ImageDemo';
 import CardsBs from '../Cards/CardsBs';
+import ReducerC from '../useReducer/ReducerC'
 
 function RoutesComponent() {
     
@@ -48,11 +49,12 @@ function RoutesComponent() {
         <Routes>
         <Route path="/" element={ <Home/>} />
 
-        <Route path="/products" element={<Products />}>
+        <Route path="/products/*" element={<Products />} />
+        {/* <Route path="/products" element={<Products />}>
           <Route index element={<Shirts/>}></Route>
           <Route path="shirts" element={<Shirts />} />
           <Route path="jeans" element={<Jeans/>} />
-        </Route>
+        </Route> */}
 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -71,6 +73,7 @@ function RoutesComponent() {
         <Route path="/detailsform" element={<DetailsForm />} />
         <Route path="/image" element={<ImageDemo />} />
         <Route path="/cards" element={<CardsBs />} />
+        <Route path="/reducer" element={<ReducerC />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}

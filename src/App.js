@@ -11,7 +11,7 @@ function App() {
       <NavbarC />
       <Flex>
         <SidebarC />
-        <RoutesComponent />
+          <RoutesComponent />
       </Flex>
     </>
   );

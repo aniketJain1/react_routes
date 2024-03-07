@@ -11,10 +11,6 @@ body {
 
 }
 
-input {
-  border: 1px solid #ced4da; /* Replace with your desired border color */
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

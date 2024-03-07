@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+
 import React from "react";
 import { Col, Container, Nav, NavDropdown, Navbar, Row } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ function NavbarC() {
               <Container>
                 <Navbar.Brand href="#" className="d-flex">
                   <img
-                    src="logo512.png"
+                    src={process.env.PUBLIC_URL +'/logo512.png'}
                     width="30"
                     height="30"
                     className="align-top"
