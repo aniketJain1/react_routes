@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import { Text } from "@chakra-ui/react";
 
 function Jeans() {
   const [apiData, setApiData] = useState([]);
@@ -67,7 +66,7 @@ function Jeans() {
 
 function JeansCard({ title, body }) {
   return (
-    <Col md={4} lg={3} className="mt-3">
+    <Col sm={6} md={4} lg={3}  className="mt-3">
       <Card bg="" border="primary" className=" shadow mb-5 bg-white rounded">
         <Card.Img src={process.env.PUBLIC_URL + "/images/jeans.jpg"} />
         <Card.Body>

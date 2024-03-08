@@ -50,7 +50,7 @@ function Shirts() {
 
 function ShirtsCard({key, title, url, thumbnailUrl }) {
   return (
-    <Col md={3} className="mt-3">
+    <Col sm={6} md={4} lg={3} className="mt-3">
       <Card className="shadow mb-5 bg-white rounded">
         <Card.Img src={url} />
         <Card.Body>

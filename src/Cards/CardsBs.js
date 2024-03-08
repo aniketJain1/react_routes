@@ -36,7 +36,7 @@ function CardsBs() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <Button variant="success">Read More</Button>
+                <Button variant="dark">Read More</Button>
                 <div className="d-grid mt-2">
                   <Button variant="primary">Submit</Button>
                 </div>
