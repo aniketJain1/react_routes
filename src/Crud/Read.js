@@ -201,7 +201,6 @@ function Read() {
 
       {/* Updation Form Logic */}
 
-      <Button onClick={onOpen}>Open Modal</Button>
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
