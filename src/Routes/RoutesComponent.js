@@ -19,6 +19,8 @@ import DetailsForm from '../ChakraForm/DetailsForm';
 import ImageDemo from '../Images/ImageDemo';
 import CardsBs from '../Cards/CardsBs';
 import ReducerC from '../useReducer/ReducerC'
+import Create from '../Crud/Create';
+import Read from '../Crud/Read';
 
 function RoutesComponent() {
     
@@ -74,6 +76,8 @@ function RoutesComponent() {
         <Route path="/image" element={<ImageDemo />} />
         <Route path="/cards" element={<CardsBs />} />
         <Route path="/reducer" element={<ReducerC />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/read" element={<Read />} />
       </Routes>
 
       {/* <AboutNavBtn/> */}

@@ -13,7 +13,7 @@ function Jeans() {
   // useEffect(() => {
   //   axios
   //   .get(baseURL)
-  //   .then((response) =>  setApiData(response.data))
+  //   .then((response) =>{ console.log("Mounted");  setApiData(response.data)})
 
   // }, []);
 
@@ -21,6 +21,7 @@ function Jeans() {
     try {
       const res = await axios.get(baseURL);
       setApiData(res.data);
+      console.log("Mounted");
     } catch (error) {
       setError(error.message);
     }
