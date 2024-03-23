@@ -62,7 +62,6 @@ function Create() {
         console.log(values.pass);
         console.log(values.cpass);
         action.resetForm();
-
         // Make a POST request using Axios
         axios
           .post("https://65eb204643ce164189334b44.mockapi.io/crud", values)

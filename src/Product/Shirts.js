@@ -1,15 +1,11 @@
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
 function Shirts() {
 
   const [apiData, setApiData] = useState([]);
   const [isError, setError] = useState("");
-
-  const baseURL = "https://jsonplaceholder.typicode.com/photos";
 
   const getApiData = async () => {
     try {
