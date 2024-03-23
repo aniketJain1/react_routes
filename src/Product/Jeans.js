@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
+import jsonp from "../api/jsonplaceholder";
+const postsURL = "/posts";
+
 function Jeans() {
   const [apiData, setApiData] = useState([]);
 
   const [isError, setError] = useState("");
 
-  const baseURL = "https://jsonplaceholder.typicode.com/posts";
+
 
   // useEffect(() => {
   //   axios
@@ -18,7 +21,7 @@ function Jeans() {
 
   const getApiData = async () => {
     try {
-      const res = await axios.get(baseURL);
+      const res = await jsonp.get(postsURL);
       setApiData(res.data);
       console.log("Mounted");
     } catch (error) {

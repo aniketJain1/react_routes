@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
+import jsonp from "../api/jsonplaceholder";
+const photosURL = "/photos";
 function Shirts() {
 
   const [apiData, setApiData] = useState([]);
@@ -9,7 +11,7 @@ function Shirts() {
 
   const getApiData = async () => {
     try {
-      const res = await axios.get(baseURL);
+      const res = await jsonp.get(photosURL);
       setApiData(res.data);
     } catch (error) {
       setError(error.message);

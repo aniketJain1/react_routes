@@ -16,7 +16,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 
-import axios from "axios";
+import mockapi from "../api/mockapi";
+
 import { Link } from "react-router-dom";
 
 // For updating imports
@@ -39,11 +40,9 @@ import { FormSchema } from "../FormikYupForm/FormSchema";
 function Read() {
   const [getData, setData] = useState([]);
 
-  const mockApiURL = "https://65eb204643ce164189334b44.mockapi.io/crud";
-
   const getApiData = async () => {
     try {
-      const res = await axios.get(mockApiURL);
+      const res = await mockapi.get();
       setData(res.data);
     } catch (error) {
       console.log(error);
@@ -53,7 +52,7 @@ function Read() {
   const toast = useToast();
   const handleDelete = async (id) => {
     try {
-      await axios.delete(mockApiURL + `/${id}`);
+      await mockapi.delete(`/${id}`);
       getApiData();
 
       toast({
@@ -94,8 +93,8 @@ function Read() {
         onClose();
 
         // Make a POST request using Axios
-        axios
-          .put(`https://65eb204643ce164189334b44.mockapi.io/crud/${values.id}`, values)
+        mockapi
+          .put(`/${values.id}`, values)
           .then((response) => {
             // Handle the successful response
             console.log("Data submitted successfully:", response.data);
@@ -326,8 +325,8 @@ function EditHandler({ editObj }) {
         action.resetForm();
 
         // Make a POST request using Axios
-        axios
-          .put(`https://65eb204643ce164189334b44.mockapi.io/crud`, values)
+        mockapi
+          .put(values)
           .then((response) => {
             // Handle the successful response
             console.log("Data submitted successfully:", response.data);

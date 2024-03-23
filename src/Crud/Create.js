@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import { Formik, useFormik } from "formik";
 import { FormSchema } from "../FormikYupForm/FormSchema";
 
-import axios from "axios";
+import mockapi from "../api/mockapi";
 
 import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
@@ -63,8 +63,8 @@ function Create() {
         console.log(values.cpass);
         action.resetForm();
         // Make a POST request using Axios
-        axios
-          .post("https://65eb204643ce164189334b44.mockapi.io/crud", values)
+        mockapi
+          .post('/',values)
           .then((response) => {
             // Handle the successful response
             console.log("Data submitted successfully:", response.data);
