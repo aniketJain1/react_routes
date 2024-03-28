@@ -6,7 +6,7 @@ function SidebarC() {
     const NavLinkCSS = ({isActive}) => {
         return{
             fontWeight: isActive ? 'bold' : 'normal',
-            fontSize: isActive ? '30px' : '22px',
+            fontSize: isActive ? '25px' : '20px',
         }
     }
     const navigate = useNavigate();
@@ -22,6 +22,8 @@ function SidebarC() {
     }
   return (
     <nav className='main-sidebar bg-dark' >
+        <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
+        <NavLink style={NavLinkCSS} to='/registration'> Register </NavLink>
         <NavLink style={NavLinkCSS} to='/'> Home </NavLink>
         <NavLink style={NavLinkCSS} to='/Products'> Products </NavLink>
         <NavLink style={NavLinkCSS} to='/about'> About </NavLink>

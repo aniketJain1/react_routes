@@ -21,6 +21,7 @@ import CardsBs from '../Cards/CardsBs';
 import ReducerC from '../useReducer/ReducerC'
 import Create from '../Crud/Create';
 import Read from '../Crud/Read';
+import Registration from '../login_registration/registration';
 
 function RoutesComponent() {
     
@@ -50,6 +51,7 @@ function RoutesComponent() {
     <>
         <Routes>
         <Route path="/" element={ <Home/>} />
+        <Route path="/registration" element={ <Registration/>} />
 
         <Route path="/products/*" element={<Products />} />
         {/* <Route path="/products" element={<Products />}>
